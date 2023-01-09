@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- Main Menu -->
+        <menuitem name="Student_Data"
+            id="menu_action_app_name"
+            sequence="1" />
+
+
+
+        <!-- Menu -->
+        <menuitem name="Menu"
+            id="menu_action_menu"
+            parent="student_management.menu_action_app_name"
+            sequence="1" />
+
+          <menuitem name="Student Info"
+            id="menu_action_sub_menu_child"
+            action="action_my_school_view"
+            parent="student_management.menu_action_menu"
+            sequence="1001" />
+
+    </data>
+</odoo>

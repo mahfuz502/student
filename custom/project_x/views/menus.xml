@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <data>
+    <menuitem
+            id="menu_tutorial_root"
+            name="Tutorial Backend"
+            />
+    <menuitem
+            id="menu_tutorial_backend_item_submenu"
+            name="Tutorial Backend Submenu"
+            parent="menu_tutorial_root"
+            action="action_tutorial_backup_menu_item"
+            />
+</data>
+
+</odoo>
+

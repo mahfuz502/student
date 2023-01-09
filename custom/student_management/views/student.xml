@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+<!--        tree view-->
+        <record id="my_school_tree_view" model="ir.ui.view">
+            <field name="name">my.school.tree.view</field>
+            <field name="model">school.init</field>
+            <field name="priority" eval="7" />
+            <field name="arch" type="xml">
+                <tree string="My Model Names">
+                    <field name="ID"/>
+                    <field name="name"/>
+                    <field name="roll"/>
+                    <field name="group"/>
+                    <field name="address"/>
+                    <field name="phone"/>
+                </tree>
+            </field>
+        </record>
+<!--        form view-->
+
+        <record id="my_school_form_view" model="ir.ui.view">
+            <field name="name">my.school.form.view</field>
+            <field name="model">school.init</field>
+            <field name="priority" eval="7"/>
+            <field name="arch" type="xml">
+                <form string="Model Name">
+                    <group>
+                        <group>
+                            <field name="ID"/>
+                            <field name="name"/>
+                            <field name="roll"/>
+                        </group>
+                        <group>
+                            <field name="group"/>
+                            <field name="address"/>
+                            <field name="phone"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+<!--        action-->
+        <record id="action_my_school_view" model="ir.actions.act_window">
+            <field name="name">My Model Name</field>
+            <field name="res_model">school.init</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="my_school_form_view"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create o_view_nocontent_smiling_face">
+                    Add a new record.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
